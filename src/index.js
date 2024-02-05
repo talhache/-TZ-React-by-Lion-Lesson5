@@ -9,11 +9,21 @@ import Main from "./app/pages/Main";
 import PageNotFound from "./app/pages/PageNotFound";
 import Users from "./app/pages/Users";
 import User from "./app/pages/User";
+import Posts from "./app/pages/Posts";
+import Post from "./app/pages/Post";
+import Coms from "./app/pages/Coms";
+import Com from "./app/pages/Com";
 
 ReactDOM.render(
 	<Router history={browserHistory}>
 		<Route path="/" component={Layout}>
 			<IndexRoute component={Main} />
+			<Route path="posts" component={Posts}>
+				<Route path=":postId" component={Post} />
+			</Route>
+			<Route path="coms" component={Coms}>
+				<Route path=":comId" component={Com} />
+			</Route>
 			<Route path="users" component={Users}>
 				<Route path=":userId" component={User} />
 			</Route>
