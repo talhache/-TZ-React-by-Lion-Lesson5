@@ -19,10 +19,10 @@ ReactDOM.render(
 		<Route path="/" component={Layout}>
 			<IndexRoute component={Main} />
 			<Route path="posts" component={Posts}>
-				<Route path=":postId" component={Post} />
+				<Route path=":userId" component={Post} />
 			</Route>
 			<Route path="coms" component={Coms}>
-				<Route path=":comId" component={Com} />
+				<Route path=":postId" component={Com} />
 			</Route>
 			<Route path="users" component={Users}>
 				<Route path=":userId" component={User} />
